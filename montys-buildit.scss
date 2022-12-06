@@ -1,0 +1,1215 @@
+// @media only screen and (min-width: 900px) {
+// /* adjustments for ipads n tablets: */ }
+
+$green-colour: #00C86C;
+$yellow-colour: #FFD600;
+$border-style: 2px solid black;
+$grey-colour: #5F5F5F;
+
+// This mixin sets the flex-wrapping for the containers.
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// This mixin sets the dimensions for the WLG and AKL container.
+@mixin container-wh {
+  width: 50%;
+  height: 870px;
+}
+
+// This mixin holds the settings for the WLG and AKL content boxes.
+@mixin wlg-akl-wh {
+  width: 100%;
+  height: 790px;
+  border: $border-style;
+}
+
+// This mixin holds the settings for the WLG and AKL tabs.
+@mixin tab-settings {
+  width: 200px;
+  height: 60px;
+  margin-bottom: -10px;
+  padding-top: 20px;
+  border-top: $border-style;
+  border-left: $border-style;
+  border-right: $border-style;
+  border-radius: 6px;
+}
+
+@mixin addy-box-settings {
+  width: 100%;
+  height: 100px;
+  border-bottom: $border-style;
+}
+
+@mixin grid-image-settings {
+  width: 48%;
+  height: 160px;
+}
+
+@mixin br-line {
+  width: 50%;
+  height: 2px;
+}
+
+@mixin map-settings {
+  background-size: cover;
+  margin-left: 12.5%;
+  width: 74%;
+  height: 360px;
+  margin-top: 20px;
+  margin-bottom: -8px;
+  border-radius: 8px;
+}
+
+// @mixin map-transition {
+//   transform: scale(1.7);
+//   transition: transform .5s;
+//   position: relative;
+//   top: 2px;
+//   left: 5px;
+// }
+
+@mixin image-transition {
+  transform: scale(2.5);
+  transition: transform .5s;
+  position: relative;
+  top: -20px;
+  left: 50;
+}
+
+
+// This section is for the text.
+h1,
+.akl-tab-h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-box a {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 30px;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+.gallery-tab a {
+  font-size: 0px;
+}
+
+.wlg-tab a,
+.akl-tab a {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 65px;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+.top-tab-h6 {
+  font-size: 0px;
+}
+
+h2 {
+  margin-top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 1px;
+  margin-left: 25px;
+}
+
+.montys-handle-wlg {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  color: black;
+  text-decoration: none;
+  margin-top: 275px;
+  margin-left: 9%;
+  position: absolute;
+  z-index: 1;
+}
+
+.montys-handle-akl {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  color: black;
+  text-decoration: none;
+  margin-top: 275px;
+  margin-left: 82.2%;
+  position: absolute;
+  z-index: 1;
+}
+
+.montys-handle-wlg:hover {
+  color: $yellow-colour;
+  transition: 0.2s;
+}
+
+.montys-handle-akl:hover {
+  color: $green-colour;
+  transition: 0.2s;
+}
+
+.akl-tab-mobile-h6 {
+  font-size: 0px;
+}
+
+.intro-p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blurb {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 35px;
+  margin-left: 14%;
+  margin-right: 28%;
+}
+
+.brands-prompt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-left: 25px;
+  margin-right: 8%;
+}
+
+.brands-prompt2 {
+  font-size: 0px;
+}
+
+.handle-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-top: 4px;
+  padding-left: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.handle-text:hover {
+  color: $grey-colour;
+  transition: .2s;
+}
+
+// End of the text section.
+
+
+// This div contains everything.
+.everything-container {
+  @include flex;
+  width: 100%;
+  height: 1387px;
+  border: 3px solid black;
+}
+
+.logo-box {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border-left: $border-style;
+  border-right: $border-style;
+  border-bottom: $border-style;
+  padding-top: 15px;
+  position: fixed;
+  left: 43.1%;
+  top: -0.2px;
+}
+
+// This div contains the top block of content.
+.top-content {
+  @include flex;
+  width: 100%;
+  height: 520px;
+}
+
+// This is the big, yellow corner border at the top.
+.yellow-border1 {
+  width: 46%;
+  height: 600px;
+  margin-top: 16px;
+  margin-left: 1%;
+  border-top: 3px solid $yellow-colour;
+  border-left: 3px solid $yellow-colour;
+  position: absolute;
+  z-index: -5;
+}
+
+// This is the big, green corner border at the top.
+.green-border1 {
+  width: 46%;
+  height: 600px;
+  margin-top: 16px;
+  margin-left: 51.75%;
+  margin-right: 1%;
+  border-top: 3px solid $green-colour;
+  border-right: 3px solid $green-colour;
+  position: absolute;
+  z-index: -6;
+}
+
+// These are the black and yellow border lines on the left.
+.black-border1 {
+  width: 20%;
+  height: 400px;
+  margin-top: 305px;
+  margin-left: 9%;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  position: absolute;
+  z-index: -8;
+}
+
+.yellow-border2 {
+  width: 20%;
+  height: 400px;
+  margin-top: 320px;
+  margin-left: 10%;
+  border-top: 3px solid $yellow-colour;
+  border-left: 3px solid $yellow-colour;
+  position: absolute;
+  z-index: -7;
+}
+
+// These are the black and green border lines on the right.
+.black-border2 {
+  width: 20%;
+  height: 400px;
+  margin-top: 305px;
+  margin-left: 69%;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  position: absolute;
+  z-index: -9;
+}
+
+.green-border2 {
+  width: 20%;
+  height: 400px;
+  margin-top: 320px;
+  margin-left: 68%;
+  margin-right: 10%;
+  border-top: 3px solid $green-colour;
+  border-right: 3px solid $green-colour;
+  position: absolute;
+  z-index: -7;
+}
+
+
+
+.boxes {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.box-of-type {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.br-lines {
+  @include flex;
+  width: 70%;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.yellow-br-line {
+  @include br-line;
+  background-color: $yellow-colour;
+}
+
+.green-br-line {
+  @include br-line;
+  background-color: $green-colour;
+}
+
+// Beginning of the image grid section.
+
+.box-of-images {
+  @include flex;
+  width: 100%;
+  height: 335px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.grid1 {
+  @include flex;
+  width: 47%;
+  height: 330px;
+  margin-right: 6%;
+  justify-content: center;
+}
+
+.grid2 {
+  @include flex;
+  width: 47%;
+  height: 330px;
+  justify-content: center;
+}
+
+.top-left-image {
+  @include grid-image-settings;
+  transition: transform .5s ease;
+  margin-right: 3.5%;
+  margin-bottom: 10px;
+}
+
+.top-left-image:hover {
+  @include image-transition;
+  position: relative;
+  top: -80px;
+  left: -80px;
+}
+
+.top-right-image {
+  @include grid-image-settings;
+  transition: transform .5s ease;
+}
+
+.top-right-image:hover {
+  @include image-transition;
+  position: relative;
+  top: -80px;
+  left: 80px;
+}
+
+.bottom-left-image {
+  @include grid-image-settings;
+  transition: transform .5s ease;
+  margin-right: 3.5%;
+  margin-bottom: 10px;
+}
+
+.bottom-left-image:hover {
+  @include image-transition;
+  position: relative;
+  left: -80px;
+}
+
+.bottom-right-image {
+  @include grid-image-settings;
+  transition: transform .5s ease;
+}
+
+.bottom-right-image:hover {
+  @include image-transition;
+  position: relative;
+  left: 80px;
+}
+
+
+
+
+// Beginning of the bottom sections.
+
+// This div contains the wlg side (content and the little tab).
+.wlg-container {
+  @include flex;
+  @include container-wh;
+}
+
+.wlg-tab {
+  @include tab-settings;
+  background-color: $yellow-colour;
+  margin-left: 13%;
+}
+
+.gallery-tab {
+  width: 0%;
+  height: 0px;
+  border-radius: 6px;
+}
+
+// This div contains the wlg block of content.
+.wlg-content {
+  @include flex;
+  @include wlg-akl-wh;
+  background-color: $yellow-colour;
+}
+
+.map1 {
+  background-image: url(site-images/map-wlg.png);
+  @include map-settings;
+}
+
+.map1:hover {
+  opacity: 80%;
+  transition: .8s;
+}
+
+.brands-box1 {
+  width: 100%;
+  height: 148px;
+  border-bottom: $border-style;
+}
+
+
+
+
+
+// This div contains the akl side (content and the little tab).
+.akl-container {
+  @include flex;
+  @include container-wh;
+}
+
+.akl-tab {
+  @include tab-settings;
+  background-color: $green-colour;
+  margin-left: 58%;
+}
+
+.akl-tab-mobile a {
+  font-size: 0px;
+}
+
+.top-tab {
+  width: 0%;
+  height: 0px;
+  border-radius: 6px;
+}
+
+// This div contains the akl block of content.
+.akl-content {
+  @include flex;
+  @include wlg-akl-wh;
+  background-color: $green-colour;
+}
+
+.map2 {
+  background-image: url(site-images/map-akl.png);
+  @include map-settings;
+}
+
+.map2:hover {
+  opacity: 80%;
+  transition: .8s;
+}
+
+.brands-box2 {
+  width: 100%;
+  height: 304px;
+  border-bottom: $border-style;
+}
+
+
+
+
+// Below are the shared classes between the WLG and AKL sections.
+.addy-box {
+  @include addy-box-settings;
+}
+
+.inner-left {
+  width: 68%;
+  height: 690px;
+}
+
+.map-box {
+  width: 100%;
+  height: 470px;
+  border-bottom: $border-style;
+}
+
+.open-hours {
+  width: 360px;
+  height: 60px;
+  margin-left: 9%;
+  margin-top: 35px;
+}
+
+.inner-right {
+  width: 31.6%;
+  height: 690px;
+  border-left: $border-style;
+}
+
+.inner-right-mobile {
+  width: 0%;
+  height: 0px;
+}
+
+.inner-right-mobile2 {
+  width: 0%;
+  height: 0px;
+}
+
+.insta-handle {
+  width: 100%;
+  height: 22px;
+  padding-top: 2px;
+  border-bottom: $border-style;
+}
+
+.insta-handle-m {
+  font-size: 0px;
+}
+
+.handle-text-m {
+  font-size: 0px;
+}
+
+.handles-set1,
+.handles-set2 {
+  width: 0%;
+  height: 0px;
+}
+
+.gallery-container-mobile {
+  width: 0%;
+  height: 0px;
+}
+
+.gallery-bar {
+  width: 99.8%;
+  height: 80px;
+  margin: 0 auto;
+  border-top: $border-style;
+  border-bottom: $border-style;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.gallery-tab-h1 {
+  font-size: 0px;
+}
+
+.mobile-img {
+  width: 0%;
+  height: 0px;
+}
+
+.img-bar-yellow {
+  width: 0%;
+  height: 0px;
+}
+
+.img-bar-green {
+  width: 0%;
+  height: 0px;
+}
+
+.back-to-top-box a {
+  font-size: 0px;
+}
+
+.brands-header-mobile {
+  font-size: 0px;
+}
+
+
+// END OF DESKTOP SECTION
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BEGINNING OF SMARTPHONE SECTION
+
+
+
+
+@media only screen and (max-width: 550px) {
+  /* adjustments for phones: */
+
+  $green-colour: #00C86C;
+  $yellow-colour: #FFD600;
+  $border-style: 2px solid black;
+
+  // This mixin sets the flex-wrapping for the containers.
+  @mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // This mixin sets the dimensions for the WLG and AKL container.
+  @mixin container-wh {
+    width: 100%;
+    height: 1300px;
+  }
+
+  // This mixin holds the settings for the WLG and AKL tabs.
+  @mixin tab-settings {
+    width: 150px;
+    height: 70px;
+    padding-top: 25px;
+    margin-left: 1.2%;
+    border-top: $border-style;
+    border-left: $border-style;
+    border-right: $border-style;
+    border-radius: 6px;
+  }
+
+  @mixin map-settings {
+    margin-top: 8px;
+    margin-bottom: -5px;
+  }
+
+  @mixin addy-box-settings {
+    width: 100%;
+    height: 100px;
+    border-bottom: $border-style;
+  }
+
+  @mixin grid-image-settings {
+    width: 48%;
+    height: 160px;
+  }
+
+  @mixin br-line {
+    width: 50%;
+    height: 2px;
+  }
+
+
+  // This section is for the text.
+  h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .logo-box a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .wlg-tab a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .akl-tab-mobile a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 45px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .gallery-tab a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 23px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .akl-tab-h1 {
+    font-size: 0px;
+  }
+
+  .gallery-tab-h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .top-tab-h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 40px;
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+
+
+  h2 {
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h3,
+  .brands-header-mobile {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 35px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 1px;
+    margin-left: 25px;
+  }
+
+  h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 1px;
+  }
+
+  .intro-p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+  .blurb {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-left: 7%;
+    margin-right: 28%;
+  }
+
+  .montys-handle-wlg {
+    margin-top: 375px;
+  }
+
+  .montys-handle-akl {
+    margin-top: 375px;
+    margin-left: 70%;
+  }
+
+  .brands-prompt,
+  .brands-prompt2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 7%;
+    margin-right: 8%;
+    margin-top: -4px;
+  }
+
+  .handle-text {
+    width: 0%;
+    height: 0px;
+  }
+
+  .handle-text-m {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 5px;
+    color: black;
+    text-decoration: none;
+  }
+
+  // End of the text section.
+
+  .everything-container {
+    height: 7080px;
+  }
+
+  .logo-box {
+    left: 30%;
+  }
+
+  // This div contains the top block of content.
+  .top-content {
+    height: 510px;
+  }
+
+  // This is the big, yellow corner border at the top.
+  .yellow-border1 {
+    margin-top: 8px;
+    margin-left: 1.4%;
+  }
+
+  // This is the big, green corner border at the top.
+  .green-border1 {
+    margin-top: 8px;
+    margin-left: 49%;
+  }
+
+  // These are the black and yellow border lines on the left.
+  .black-border1 {
+    width: 40%;
+    margin-top: 405px;
+  }
+
+  .yellow-border2 {
+    width: 37.7%;
+    margin-top: 416px;
+    margin-left: 11%;
+  }
+
+  // These are the black and green border lines on the right.
+  .black-border2 {
+    width: 40%;
+    margin-top: 405px;
+    margin-left: 49%;
+  }
+
+  .green-border2 {
+    width: 37.7%;
+    margin-top: 416px;
+    margin-left: 49.3%;
+  }
+
+
+
+  .boxes {
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .box-of-type {
+    width: 100%;
+    height: 150px;
+  }
+
+  .br-lines {
+    margin-bottom: 15px;
+  }
+
+
+  // Desktop image grid section disappears on mobile.
+
+  .box-of-images {
+    width: 0%;
+    height: 0px;
+  }
+
+  // Beginning of the bottom sections.
+
+  // This div contains the wlg side (content and the little tab).
+  .wlg-container {
+    @include flex;
+    @include container-wh;
+  }
+
+
+  .wlg-tab {
+    @include tab-settings;
+  }
+
+  .gallery-tab {
+    @include tab-settings;
+    background-color: white;
+  }
+
+  .akl-tab-mobile {
+    @include tab-settings;
+    background-color: $green-colour;
+  }
+
+
+
+  // This div contains the wlg block of content.
+  .wlg-content {
+    @include flex;
+    width: 100%;
+    height: 1160px;
+    border: $border-style;
+    margin-top: -55px;
+    background-color: $yellow-colour;
+  }
+
+
+  .map1 {
+    @include map-settings;
+  }
+
+  .map1:hover {
+    transform: scale(1);
+  }
+
+  .blurb-box {
+    width: 100%;
+    height: 130px;
+    border-bottom: $border-style;
+  }
+
+  .brands-box1 {
+    width: 100%;
+    height: 90px;
+    border-top: $border-style;
+    border-bottom: $border-style;
+    background-color: $yellow-colour;
+    margin-top: -80px;
+  }
+
+  .inner-right-mobile {
+    @include flex;
+    background-color: $yellow-colour;
+    width: 100%;
+    height: 357px;
+  }
+
+
+
+
+
+
+  // This div contains the akl side (content and the little tab).
+  .akl-container {
+    @include flex;
+    @include container-wh;
+    margin-top: -50px;
+  }
+
+  .yellow-break-box {
+    width: 96%;
+    height: 200px;
+    background-color: $yellow-colour;
+    position: absolute;
+    z-index: -1;
+    margin-top: -100px;
+    border-left: $border-style;
+    border-right: $border-style;
+  }
+
+  .yellow-break-box2 {
+    width: 96%;
+    height: 40px;
+    background-color: $yellow-colour;
+    position: absolute;
+    z-index: 1;
+    margin-top: -57px;
+    margin-left: 0.4px;
+    border-left: $border-style;
+    border-right: $border-style;
+  }
+
+  .akl-tab {
+    display: none;
+  }
+
+  .top-tab {
+    width: 150px;
+    height: 80px;
+    margin-left: 1.2%;
+    border-top: $border-style;
+    border-left: $border-style;
+    border-right: $border-style;
+    background-color: black;
+  }
+
+
+  // This div contains the akl block of content.
+  .akl-content {
+    @include flex;
+    width: 100%;
+    height: 1200px;
+    border: $border-style;
+    margin-top: -15px;
+    background-color: $green-colour;
+  }
+
+  .map2 {
+    @include map-settings;
+  }
+
+  .map2:hover {
+    transition: scale(1);
+  }
+
+  .brands-box2 {
+    width: 100%;
+    height: 90px;
+    border-bottom: $border-style;
+    background-color: $green-colour;
+    margin-top: -80px;
+  }
+
+  .inner-right-mobile2 {
+    @include flex;
+    background-color: $green-colour;
+    width: 100%;
+    height: 357px;
+  }
+
+
+
+
+  // Below are the shared classes between the WLG and AKL sections.
+  .addy-box {
+    @include addy-box-settings;
+  }
+
+  .inner-left {
+    width: 100%;
+    height: 690px;
+  }
+
+  .map-box {
+    width: 100%;
+    height: 455px;
+    overflow: hidden;
+    border-bottom: $border-style;
+  }
+
+  .open-hours {
+    width: 360px;
+    height: 60px;
+    margin-left: 2%;
+    margin-top: 25px;
+  }
+
+  .inner-right {
+    width: 0%;
+    height: 0px;
+  }
+
+  .handles-set1 {
+    width: 49.5%;
+    height: 350px;
+  }
+
+  .handles-set2 {
+    width: 49.5%;
+    height: 350px;
+    border-left: $border-style;
+  }
+
+  .handles-set1-akl {
+    width: 49.5%;
+    height: 245px;
+    margin-top: -100px;
+  }
+
+  .handles-set2-akl {
+    width: 49.5%;
+    height: 245px;
+    border-left: $border-style;
+    margin-top: -100px;
+  }
+
+  .insta-handle {
+    width: 0%;
+    height: 0px;
+  }
+
+  .insta-handle-m {
+    width: 100%;
+    height: 26px;
+    padding-top: 3px;
+    border-bottom: $border-style;
+  }
+
+  // Start of the mobile gallery section.
+
+  .gallery-container-mobile {
+    @include flex;
+    width: 100%;
+    height: 4085px;
+    background-color: white;
+    margin-top: -155px;
+  }
+
+  .gallery-bar {
+    width: 99.8%;
+    height: 80px;
+    margin: 0 auto;
+    border-top: $border-style;
+    border-bottom: $border-style;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  .wlg-images {
+    @include flex;
+  }
+
+  .akl-images {
+    @include flex;
+  }
+
+  .mobile-img {
+    width: 90%;
+    height: 440px;
+    border: $border-style;
+    margin: 0 auto;
+  }
+
+  .img-bar-yellow {
+    background-color: $yellow-colour;
+    width: 90.1%;
+    height: 30px;
+    margin-top: -2px;
+    margin-left: 4.5%;
+    margin-bottom: 20px;
+    border: $border-style;
+  }
+
+  .img-bar-green {
+    background-color: $green-colour;
+    width: 90.1%;
+    height: 30px;
+    margin-top: -2px;
+    margin-left: 4.5%;
+    margin-bottom: 20px;
+    border: $border-style;
+  }
+
+  .back-to-top-box {
+    width: 150px;
+    height: 40px;
+    padding-top: 15px;
+    margin-bottom: -5px;
+    background-color: white;
+    border-left: $border-style;
+    border-right: $border-style;
+    border-top: $border-style;
+    position: fixed;
+    left: 35%;
+    bottom: 0;
+    border-radius: 6px;
+  }
+
+  .back-to-top-box a {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 14px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+  }
+
+
+}
